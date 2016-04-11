@@ -1,4 +1,5 @@
 FROM debian:8
+ADD ./sources.list /etc/apt/sources.list
 
 RUN apt-get update && apt-get install openssl --assume-yes && rm -f /var/cache/apt/archives/*deb && find /var/lib/apt/lists/ -type f -delete
 RUN apt-get update && apt-get install easy-rsa --assume-yes && rm -f /var/cache/apt/archives/*deb && find /var/lib/apt/lists/ -type f -delete
