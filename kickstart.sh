@@ -32,15 +32,7 @@ source ./vars
 ./build-ca --batch
 
 export ADDALT_NAMES=""
-for domain in \
- "wikitolearn.org" \
- "direct.wikitolearn.org" \
- "wikitolearn.vodka" \
- "tuttorotto.biz" \
- "tuttorotto.org" \
- "tuttorotto.it" \
- "tuttorotto.eu" \
- "localhost"
+for domain in "localhost"
 do
  export ADDALT_NAMES=$ADDALT_NAMES",DNS:"$domain
  export ADDALT_NAMES=$ADDALT_NAMES",DNS:*."$domain
